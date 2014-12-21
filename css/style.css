@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -29,20 +30,103 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	background-color: LightGray;
+	line-height: 1;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
 }
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
+/* End of Reset */
+/* Start of Custom Styles */
+.content{
+	margin: 0 auto;
+	padding: 0 0.938rem;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+/* Navigation Section */
+.top-navigation{
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+	border-bottom: 1px solid #DDD;
+	z-index: 9999;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.top-navigation > .content {
+	margin: 0 auto;
+	width: 970px;
+	height: 70px;
 }
+.top-navigation .logo{
+	height: 70px;
+}
+.top-navigation .links {
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    color: #838994;
+    font-size: 16px;
+    margin-top: 25px;
+    letter-spacing: 0.03em;
+    -webkit-font-smoothing: antialiased;
+}
+.top-navigation .links li {
+    display: inline-block;
+    margin-left: 25px;
+}
+.top-navigation .links .active {
+    color: #4c5058;
+    font-weight: 500;
+}
+.top-navigation .links li:hover {
+    cursor: pointer;
+    color: #333333;
+}
+.introduction{
+	background-image: url('../img/first-background.jpg');
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 39.938rem;
+	overflow: auto;
+}
+.introduction h1{
+	padding-top: 230px;
+	font-size: 3.125rem;
+}
+.introduction h3{
+	margin-top: 1.25rem;
+	font-size: 1.563rem;
+}
+.introduction h1, .introduction h3{
+	color: #fff;
+	text-align: center;
+	font-weight: 300;
+}
+.buttons{
+	padding: 20px 0 0 590px;
+}
+.big-button {
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 16px 26px;
+    line-height: 1.33;
+}
+button{
+	width: 9.688rem;
+	background-color: #f15a29;
+	border-color: #f15a29;
+	text-shadow: none;
+	border-style: none;
+	border-radius: 4px;
+	padding: 1rem 17rem;
+	color: white;
+	font-size: 1.125rem;
+	text-align: center;
+}
+button:hover {
+background-color: #d9400e;
+border-color: #cf3d0e;
+cursor: pointer;
